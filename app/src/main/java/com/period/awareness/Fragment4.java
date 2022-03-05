@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,12 +17,13 @@ import androidx.fragment.app.Fragment;
 
 public class Fragment4 extends Fragment {
     private TextView option1,option2,option3;
-    private androidx.cardview.widget.CardView option1card,option2card,option3card,next,check;
+    private androidx.cardview.widget.CardView option1card,option2card,option3card,next,hint;
     private String correctanswer,selected;
     private LinearLayout Quizlinearlayout;
     private TextView quesnum,anshint,question;
     private String[] correct,options,questions,faqs;
     private int[] n;
+    private Boolean enter=true;
     private int counter1=0,optioncounter=0,score=0;
     @Nullable
     @Override
@@ -36,11 +38,10 @@ public class Fragment4 extends Fragment {
         option2card.setOnClickListener(listen);
         option3card=view.findViewById(R.id.option3card);
         option3card.setOnClickListener(listen);
+        hint=view.findViewById(R.id.hint);
         anshint=view.findViewById(R.id.anshint);
         next=view.findViewById(R.id.next);
         next.setOnClickListener(listen);
-        check=view.findViewById(R.id.check);
-        check.setOnClickListener(listen);
         quesnum=view.findViewById(R.id.question_number);
         question=view.findViewById(R.id.question);
         correct=getResources().getStringArray(R.array.correctoptions);
@@ -50,7 +51,7 @@ public class Fragment4 extends Fragment {
         n=getResources().getIntArray(R.array.number_of_options);
         quesnum.setText(getString(R.string.question_number,1,5));
         shownextques();
-        anshint.setVisibility(View.INVISIBLE);
+        hint.setVisibility(View.INVISIBLE);
         return view;
     }
     private View.OnClickListener listen=new View.OnClickListener(){
@@ -59,24 +60,40 @@ public class Fragment4 extends Fragment {
         public void onClick(View view) {
             int a=view.getId();
             if(view.getId()==R.id.next){
-                if(counter1==questions.length){
+                if(selected.equals("")){
+                    return;
+                }
+                if(counter1==questions.length+1){
                     //end quiz and reset
+                    
+                    counter1=0;
+                    optioncounter=0;
+                    return;
                 }
-                else{
-                    shownextques();
+                else {
+                    if(enter){
+                        if(selected.equals(correctanswer)){
+                            anshint.setText("Correct "+faqs[counter1-1]);
+                            score++;
+                        }
+                        else{
+                            //wrong
+                            anshint.setText("Wrong \n"+correctanswer+"\n"+faqs[counter1-1]);
+                        }
+                        hint.setVisibility(View.VISIBLE);
+                        enter=false;
+                    }
+                    else if(counter1==questions.length){
+                        //end quiz and reset
+                        counter1=0;
+                        optioncounter=0;
+                        return;
+                    }
+                    else{
+                        shownextques();
+                        enter=true;
+                    }
                 }
-            }
-            else if(view.getId()==R.id.check){
-                if(selected==correctanswer){
-                    anshint.setText("Correct "+faqs[counter1-1]);
-                    score++;
-                    check.setEnabled(false);
-                }
-                else{
-                    //wrong
-                    anshint.setText("Wrong \n"+correctanswer+"\n"+faqs[counter1-1]);
-                }
-                anshint.setVisibility(View.VISIBLE);
             }
             else{
                 //selected
@@ -106,8 +123,12 @@ public class Fragment4 extends Fragment {
         }
     };
     private void shownextques(){
-        //AnimateQuiz(true);
-        check.setEnabled(true);
+        hint.setVisibility(View.INVISIBLE);
+        option3card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+        option2card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+        option1card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+        selected="";
+        quesnum.setText(getString(R.string.question_number,counter1+1,5));
         question.setText(questions[counter1]);
         correctanswer=correct[counter1];
         if(n[counter1]==3){
@@ -119,7 +140,7 @@ public class Fragment4 extends Fragment {
             optioncounter++;
         }
         else{
-            option3.setVisibility(View.INVISIBLE);
+            option3card.setVisibility(View.INVISIBLE);
             option1.setText(options[optioncounter]);
             optioncounter++;
             option2.setText(options[optioncounter]);
@@ -127,6 +148,4 @@ public class Fragment4 extends Fragment {
         }
         counter1++;
     }
-
-
 }
