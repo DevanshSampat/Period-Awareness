@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case R.id.page2:{
                         bottomNavigationView.getMenu().getItem(1).setChecked(true);
-                        fragmentTransaction.replace(R.id.host_fragment,new Fragment2());
+                        fragmentTransaction.replace(R.id.host_fragment,new Videos());
                         break;
                     }
                     case R.id.page3:{

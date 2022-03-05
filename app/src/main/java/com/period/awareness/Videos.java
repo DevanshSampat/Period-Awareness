@@ -16,13 +16,13 @@ import com.period.awareness.datamodels.VideoData;
 
 import java.util.ArrayList;
 
-public class Fragment2 extends Fragment {
+public class Videos extends Fragment {
     View view;
     RecyclerView recyclerView;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = LayoutInflater.from(container.getContext()).inflate(R.layout.fragment2,container,false);
+        view = LayoutInflater.from(container.getContext()).inflate(R.layout.videos,container,false);
         recyclerView=  view.findViewById(R.id.rv_videos);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(new VideoAdapter());

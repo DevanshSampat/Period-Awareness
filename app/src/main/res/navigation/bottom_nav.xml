@@ -19,8 +19,8 @@
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.period.awareness.Fragment2"
-        tools:layout="@layout/fragment2" />
+        android:name="com.period.awareness.Videos"
+        tools:layout="@layout/videos" />
 
     <fragment
         android:id="@+id/fragment3"
