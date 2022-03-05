@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 
 require("dotenv").config();
 
-const serverPort = parseInt(process.env.PORT) | 5000;
+const serverPort = parseInt(process.env.PORT) || 5000;
 
 const expressApp = express();
 expressApp.use(express.json());
