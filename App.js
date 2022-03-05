@@ -18,4 +18,5 @@ expressApp.use("/ngos", require("./Api/NgoApi").router);
 
 expressApp.listen(serverPort, "0.0.0.0", () => console.log(`Express Server started at port ${serverPort}`));
 
-require("./Config/Config");
+if(process.env.debugging)
+    require("./Config/Config");
