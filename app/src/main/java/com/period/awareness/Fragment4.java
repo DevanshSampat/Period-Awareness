@@ -43,11 +43,11 @@ public class Fragment4 extends Fragment {
         check.setOnClickListener(listen);
         quesnum=view.findViewById(R.id.question_number);
         question=view.findViewById(R.id.question);
-        correct=getResources().getStringArray(R.array.correctoptions);
-        options=getResources().getStringArray(R.array.options);
-        questions=getResources().getStringArray(R.array.questions);
-        faqs=getResources().getStringArray(R.array.faqs);
-        n=getResources().getIntArray(R.array.number_of_options);
+//        correct=getResources().getStringArray(R.array.correctoptions);
+//        options=getResources().getStringArray(R.array.options);
+//        questions=getResources().getStringArray(R.array.questions);
+//        faqs=getResources().getStringArray(R.array.faqs);
+//        n=getResources().getIntArray(R.array.number_of_options);
         quesnum.setText(getString(R.string.question_number,1,5));
         shownextques();
         anshint.setVisibility(View.INVISIBLE);
