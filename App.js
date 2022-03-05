@@ -1,5 +1,4 @@
 const express = require("express");
-const connectDB = require("./config/connectDB");
 const dotenv = require("dotenv");
 
 require("dotenv").config();
@@ -11,12 +10,14 @@ expressApp.use(express.json());
 expressApp.use(express.urlencoded({ extended: false }));
 
 dotenv.config();
-connectDB();
 
-expressApp.use("/posts/school", require("./Api/SchoolPostsApi").router);
+expressApp.use("/posts", require("./Api/PostsApi").router);
 expressApp.use("/ngos", require("./Api/NgoApi").router);
+expressApp.use("/schools", require("./Api/SchoolApi").router);
 
 expressApp.listen(serverPort, "0.0.0.0", () => console.log(`Express Server started at port ${serverPort}`));
 
 if(process.env.debugging)
     require("./Config/Config");
+else
+    require("./Config/connectDB")();

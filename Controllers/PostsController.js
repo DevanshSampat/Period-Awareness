@@ -44,4 +44,57 @@ async function getQuestion(req,resp)
     }
 }
 
-module.exports = {answerQuestion, getQuestion};
+async function getSchoolQuestions(req,resp)
+{
+    try
+    {
+        const schoolId = req.params.id;
+
+        const questions = await postModel.find({askedBy: schoolId},{_id:1,question:1,created:1}).lean();
+
+        resp.status(200).json({success:true,questions});
+    }
+    catch(err)
+    {
+        console.log(err);
+        resp.sendStatus(500);
+    }
+}
+
+async function getAllQuestions(req,resp)
+{
+    try
+    {
+        const questions = await postModel.find({});
+
+        resp.status(200).json({success:true,questions});
+    }
+    catch(err)
+    {
+        console.log(err);
+        resp.sendStatus(500);
+    }
+}
+
+async function createQuestion(req,resp)
+{
+    try
+    {
+        const {creatorId, question} = req.body;
+
+        const questionObj = new postModel({
+            question:question,
+            askedBy: creatorId
+        });
+        await questionObj.save();
+
+        resp.sendStatus(200);
+    }
+    catch(err)
+    {
+        console.log(err);
+        resp.sendStatus(500);
+    }
+}
+
+module.exports = {answerQuestion, getQuestion, getSchoolQuestions, getAllQuestions, createQuestion};
