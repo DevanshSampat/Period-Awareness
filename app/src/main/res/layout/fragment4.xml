@@ -26,7 +26,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#E63E6D"
+        app:cardBackgroundColor="#E63E6D"
         app:cardCornerRadius="20sp"
         android:layout_margin="10dp">
         <TextView
@@ -37,13 +37,14 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
             android:layout_marginVertical="5dp"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFEDD3"
+        app:cardBackgroundColor="#FFEDD3"
         app:cardCornerRadius="20sp"
         android:id="@+id/option1card"
         android:layout_margin="10dp">
@@ -61,7 +62,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFEDD3"
+        app:cardBackgroundColor="#FFEDD3"
         app:cardCornerRadius="20sp"
         android:id="@+id/option2card"
         android:layout_margin="10dp">
@@ -79,7 +80,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFEDD3"
+        app:cardBackgroundColor="#FFEDD3"
         app:cardCornerRadius="20sp"
         android:id="@+id/option3card"
         android:layout_margin="10dp">
@@ -100,7 +101,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:backgroundTint="#E63E6D"
+        app:cardBackgroundColor="#E63E6D"
         app:cardCornerRadius="20sp"
         android:id="@+id/check"
         android:layout_gravity="center"
@@ -118,7 +119,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:backgroundTint="#E63E6D"
+        app:cardBackgroundColor="#E63E6D"
         app:cardCornerRadius="20sp"
         android:id="@+id/next"
         android:layout_gravity="center"
@@ -138,7 +139,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFEDD3"
+        app:cardBackgroundColor="#FFEDD3"
         app:cardCornerRadius="20sp"
         android:id="@+id/hint"
         android:layout_margin="10dp">
