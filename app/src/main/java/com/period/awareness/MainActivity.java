@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.getMenu().getItem(0).setChecked(true);
-        fragmentTransaction.replace(R.id.host_fragment,new Fragment1());
+        fragmentTransaction.replace(R.id.host_fragment,new PeriodInformation());
         fragmentTransaction.commit();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.page1:{
                         bottomNavigationView.getMenu().getItem(0).setChecked(true);
-                        fragmentTransaction.replace(R.id.host_fragment,new Fragment1());
+                        fragmentTransaction.replace(R.id.host_fragment,new PeriodInformation());
                         break;
                     }
                     case R.id.page2:{

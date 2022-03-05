@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/period_information"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:src="@drawable/img"
+        android:id="@+id/img"
+        android:layout_gravity="center"
+        android:layout_height="250dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@id/img"
+        android:padding="12dp"
+        android:orientation="vertical"
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#7D1935"
+            android:padding="8dp"
+            android:autoSizePresetSizes="12sp"
+            android:layout_width="wrap_content"
+            android:background="@drawable/light_text_bg"
+            android:layout_height="wrap_content"
+            android:text="Periods usually begin at around the age of 12, although some girls will start them earlier or later."
+            android:textSize="18sp"/>
+        <TextView
+            android:textColor="#7D1935"
+            android:layout_marginTop="8dp"
+            android:autoSizePresetSizes="12sp"
+            android:background="@drawable/dark_text_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A period is the part of the menstrual cycle when a woman bleeds from her vagina for a few days."
+            android:textSize="18sp"/>
+        <TextView
+            android:textColor="#7D1935"
+            android:layout_marginTop="8dp"
+            android:autoSizePresetSizes="12sp"
+            android:background="@drawable/light_text_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="For most women this happens every 28 days or so"
+            android:textSize="18sp"/>
+        <TextView
+            android:textColor="#7D1935"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/dark_text_bg"
+            android:layout_width="wrap_content"
+            android:autoSizePresetSizes="12sp"
+            android:layout_height="wrap_content"
+            android:text="Your period can last between 3 and 8 days, but it will usually last for about 5 days"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:autoSizePresetSizes="12sp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="What all you can use during your periods? and how to use them?"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:id="@+id/image"
+            android:src="@drawable/img_1"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="250dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#7D1935"
+            android:layout_marginTop="8dp"
+            android:id="@+id/pads"
+            android:background="@drawable/light_text_bg"
+            android:layout_width="wrap_content"
+            android:autoSizePresetSizes="12sp"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Sanitary pads"
+            android:textSize="18sp"/>
+            <ImageView
+                android:layout_width="48dp"
+                android:src="@drawable/pad"
+                android:paddingTop="8dp"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@id/pads"
+                android:layout_height="48dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#7D1935"
+                android:layout_marginTop="8dp"
+                android:id="@+id/tampons"
+                android:background="@drawable/dark_text_bg"
+                android:layout_width="wrap_content"
+                android:autoSizePresetSizes="12sp"
+                android:layout_height="wrap_content"
+                android:text="\u2022 Tampons"
+                android:textSize="18sp"/>
+            <ImageView
+                android:layout_width="48dp"
+                android:src="@drawable/tampon"
+                android:paddingTop="8dp"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@id/tampons"
+                android:layout_height="48dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#7D1935"
+            android:layout_marginTop="8dp"
+            android:id="@+id/cups"
+            android:background="@drawable/light_text_bg"
+            android:layout_width="wrap_content"
+            android:autoSizePresetSizes="12sp"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Menstrual Cups"
+            android:textSize="18sp"/>
+            <ImageView
+                android:layout_width="48dp"
+                android:src="@drawable/cup"
+                android:paddingTop="8dp"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@id/cups"
+                android:layout_height="48dp"/>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:text="Click here for more information"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/button_bg"
+            android:id="@+id/more_info"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

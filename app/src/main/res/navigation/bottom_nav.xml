@@ -13,8 +13,8 @@
 
     <fragment
         android:id="@+id/fragment1"
-        android:name="com.period.awareness.Fragment1"
-        tools:layout="@layout/fragment1" >
+        android:name="com.period.awareness.PeriodInformation"
+        tools:layout="@layout/period_information" >
     </fragment>
 
     <fragment
@@ -31,6 +31,6 @@
         android:id="@+id/fragment4"
         android:name="com.period.awareness.Fragment4"
 
-        tools:layout="@layout/fragment1" />
+        tools:layout="@layout/period_information" />
 
 </navigation>
