@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_marginBottom="56dp"
     android:layout_height="match_parent">
@@ -127,9 +127,16 @@
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_post"
+            android:layout_below="@id/qa4"
+            android:layout_marginTop="6dp" />
         <TextView
             android:layout_width="wrap_content"
-            android:layout_below="@id/qa4"
+            android:layout_below="@id/rv_post"
             android:id="@+id/help_msg"
             android:layout_margin="14dp"
             android:textSize="14sp"
@@ -148,4 +155,4 @@
             android:layout_height="wrap_content"/>
     </RelativeLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
