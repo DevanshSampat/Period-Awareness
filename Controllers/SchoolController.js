@@ -14,7 +14,8 @@ async function registerSchool(req,resp)
 
         const schoolId = (await (new schoolModel({
             name : schoolName,
-            password
+            password,
+            email : `${schoolName.replace(/\s/g, "")}@email.com`
         })).save())._id.toString();
 
         resp.status(200).json({success:true,schoolId});

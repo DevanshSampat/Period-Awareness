@@ -6,8 +6,8 @@ const ngoSchoolMapSchema = new mongoose.Schema({
     schoolId: {type: ObjectId, required: true},
     ngoId: {type: ObjectId, required: true},
     contactDate : {type: Date, default: () => Date.now()},
-    status: {type: String, enum: ["Pending", "Completed"], default : "Pending"},
-    budget : {type: Number, default: 0}
+    status: {type: String, enum: ["Pending", "Accepted"], default : "Pending"},
+    budget : {type: Number, default: 10000 }
 },{
     collection: "NgoSchoolMapping"
 });

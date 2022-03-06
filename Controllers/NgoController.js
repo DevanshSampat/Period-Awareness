@@ -91,5 +91,28 @@ async function getRequests(req,resp)
     }
 }
 
+async function acceptRequest(req,resp)
+{
+    try
+    {
+        const requestId = req.params.id;
 
-module.exports = {registerNgo, getNgosByLocation, contactNgo, getRequests};
+        const requestDetails = await ngoMapModel.findOne({_id : requestId});
+        if(requestDetails.status === "Accepted")
+        {
+            resp.status(200).json({success:false, msg: "Already accepted"});
+            return;
+        }
+        
+        await ngoMapModel.updateOne({_id : requestId}, {$set : {status: "Accepted"}});
+
+        resp.sendStatus(200);
+    }
+    catch(err)
+    {
+        console.log(err);
+        resp.sendStatus(500);
+    }
+}
+
+module.exports = {registerNgo, getNgosByLocation, contactNgo, getRequests, acceptRequest};
