@@ -37,7 +37,7 @@ public class PeriodInformation extends Fragment implements View.OnClickListener 
 
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack
-        transaction.replace(R.id.main_activity, newFragment);
+        transaction.replace(R.id.host_fragment, newFragment);
         transaction.addToBackStack(null);
 
         // Commit the transaction
