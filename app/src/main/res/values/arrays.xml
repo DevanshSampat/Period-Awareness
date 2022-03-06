@@ -7,7 +7,7 @@
         <item>3</item>
         <item>2</item>
     </integer-array>
-    <string-array name="questions">
+  <string-array name="questions">
         <item>How long does the typical period last?</item>
         <item>How much blood does the average woman lose during each period?</item>
         <item>When your period starts, it is normal to feel pain in:</item>

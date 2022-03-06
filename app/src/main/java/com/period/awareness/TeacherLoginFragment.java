@@ -31,9 +31,7 @@ public class TeacherLoginFragment extends Fragment {
                 String password = password_edit.getText().toString();
                 if(!id.contains("Tea"))
                     Toast.makeText(getActivity(),"Enter correct id",Toast.LENGTH_SHORT).show();
-                if(password.length()!=6 ){
-                    Toast.makeText(getActivity(),"Password needs to be 6 characters minimum",Toast.LENGTH_SHORT).show();
-                }
+
                 Fragment newFragment = new ChatFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("teacher_id",id);

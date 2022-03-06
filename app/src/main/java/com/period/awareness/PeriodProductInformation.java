@@ -26,7 +26,7 @@ public class PeriodProductInformation extends Fragment implements View.OnClickLi
     }
     @Override
     public void onClick(View v) {
-        Log.v("onclick","inside the onclick v");
+
         // Create new fragment and transaction
         Fragment newFragment = new Videos();
         // consider using Java coding conventions (upper first char class names!!!)
