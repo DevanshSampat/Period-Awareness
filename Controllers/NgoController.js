@@ -1,3 +1,4 @@
+const { schoolModel } = require("../Models/SchoolModel");
 const ngoModel = require("../Models/NgoModel").ngoModel;
 const ngoMapModel = require("../Models/NgoSchoolMap").ngoSchoolMapModel;
 
@@ -75,12 +76,17 @@ async function getRequests(req,resp)
 
         const mappings = await ngoMapModel.find({ngoId},{ngoId:0}).lean();
         const requests = {pending : [], completed: []};
-        mappings.forEach((mapping) => {
-            if(mapping.status === "Pending")
-                requests.pending.push(mapping);
+        for(let i = 0; i < mappings.length; ++i)
+        {
+            const s = await schoolModel.findOne({_id : mappings[i].schoolId},{password:0});
+            mappings[i].school = s;
+            delete mappings[i].schoolId;
+
+            if(mappings[i].status === "Pending")
+                requests.pending.push(mappings[i]);
             else
-                requests.completed.push(mapping);
-        });
+                requests.completed.push(mappings[i]);
+        }
 
         resp.status(200).json({success: true, requests});
     }
