@@ -20,7 +20,8 @@ public class PeriodProductInformation extends Fragment implements View.OnClickLi
         View v=inflater.inflate(R.layout.fragment_period_product_information, container, false);
         Button go_to_video_fragment = v.findViewById(R.id.go_to_video_fragment);
         Button go_video_fragment = v.findViewById(R.id.go_video_fragment);
-
+        go_to_video_fragment.setOnClickListener(this);
+        go_to_video_fragment.setOnClickListener(this);
         return v;
     }
     @Override
