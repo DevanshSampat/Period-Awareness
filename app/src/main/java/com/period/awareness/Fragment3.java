@@ -62,6 +62,111 @@ public class Fragment3 extends Fragment {
         wronganswer= AnimationUtils.loadAnimation(getContext(),R.anim.wrong_answer_animation);
         wronganswer.setRepeatCount(1);
         return view;
+  }
+    private View.OnClickListener listen=new View.OnClickListener(){
+        @SuppressLint("ResourceAsColor")
+        @Override
+        public void onClick(View view) {
+            int a=view.getId();
+            if(view.getId()==R.id.next){
+                if(selected.equals("")){
+                    return;
+                }
+                else {
+                    if(enter){
+                        if(selected.equals(correctanswer)){
+                            anshint.setText("Correct \n"+faqs[counter1-1]);
+                            score++;
+                        }
+                        else{
+                            //wrong
+                            anshint.setText("Wrong \n"+correctanswer+"\n"+faqs[counter1-1]);
+                        }
+                        hint.setVisibility(View.VISIBLE);
+                        hint.startAnimation(wronganswer);
+                        enter=false;
+                    }
+                    else if(counter1==questions.length){
+                        //end quiz and reset
+                        Dialog dialog=new Dialog(getContext());
+                        dialog.setContentView(R.layout.dailog_score);
+                        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+                        ((TextView)dialog.findViewById(R.id.result)).setText("Congrats you have Scored "+score+" out of 5");
+                        dialog.show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                try{
+                                    dialog.dismiss();
+                                }catch (Exception ignored){
+                                }
+
+                            }
+                        },5000);
+                        counter1=0;
+                        optioncounter=0;
+                        score=0;
+                        return;
+                    }
+                    else{
+                        shownextques();
+                        enter=true;
+                    }
+                }
+            }
+            else{
+                //selected
+                switch (view.getId()){
+                    case R.id.option1card:
+                        option1card.setCardBackgroundColor(Color.parseColor("#FE8F8F"));
+                        option2card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+                        option3card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+                        selected= (String) option1.getText();
+                        break;
+
+                    case R.id.option2card:
+                        option2card.setCardBackgroundColor(Color.parseColor("#FE8F8F"));
+                        option1card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+                        option3card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+                        selected= (String) option2.getText();
+                        break;
+                    case R.id.option3card:
+                        option3card.setCardBackgroundColor(Color.parseColor("#FE8F8F"));
+                        option2card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+                        option1card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+                        selected= (String) option3.getText();
+                        break;
+                }
+
+            }
+        }
+    };
+    private void shownextques(){
+        hint.setVisibility(View.INVISIBLE);
+        option3card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+        option2card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+        option1card.setCardBackgroundColor(Color.parseColor("#FFEDD3"));
+        selected="";
+        quesnum.setText(getString(R.string.question_number,counter1+1,5));
+        question.setText(questions[counter1]);
+        correctanswer=correct[counter1];
+        if(n[counter1]==3){
+            option3card.setVisibility(View.VISIBLE);
+            option1.setText(options[optioncounter]);
+            optioncounter++;
+            option2.setText(options[optioncounter]);
+            optioncounter++;
+            option3.setText(options[optioncounter]);
+            optioncounter++;
+        }
+        else{
+            option3card.setVisibility(View.INVISIBLE);
+            option1.setText(options[optioncounter]);
+            optioncounter++;
+            option2.setText(options[optioncounter]);
+            optioncounter++;
+        }
+        counter1++;
     }
     private View.OnClickListener listen=new View.OnClickListener(){
         @SuppressLint("ResourceAsColor")

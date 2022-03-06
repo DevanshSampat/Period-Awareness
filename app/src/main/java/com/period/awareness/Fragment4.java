@@ -67,5 +67,6 @@ public class Fragment4 extends Fragment  implements View.OnClickListener {
 
         // Commit the transaction
         transaction.commit();
+        return LayoutInflater.from(container.getContext()).inflate(R.layout.fragment2,container,false);
     }
 }
