@@ -62,7 +62,7 @@ public class Fragment3 extends Fragment {
         wronganswer= AnimationUtils.loadAnimation(getContext(),R.anim.wrong_answer_animation);
         wronganswer.setRepeatCount(1);
         return view;
-    }
+  }
     private View.OnClickListener listen=new View.OnClickListener(){
         @SuppressLint("ResourceAsColor")
         @Override

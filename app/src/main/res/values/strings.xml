@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="base_url">" https://makethon-app.herokuapp.com"</string>
     <string name="question_number">This is Question %1$d of %2$d.</string>
+
 </resources>
