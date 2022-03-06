@@ -3,18 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/activity_main.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/fragment0.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/fragment4.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/fragment_chat.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/fragment_check_role.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/fragment_period_product_information.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/fragment_student_login.xml" value="0.18432971014492755" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/fragment_teacher_login.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/period_information.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/post_item.xml" value="0.25" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/video_item.xml" value="0.18432971014492755" />
-        <entry key="..\:/Users/DEVANSH/StudioProjects/PeriodAwareness/app/src/main/res/layout/videos.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/drawable/button_bg.xml" value="0.242" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/drawable/dark_text_bg.xml" value="0.242" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/drawable/edit_text_bg.xml" value="0.242" />
@@ -27,19 +15,23 @@
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment0.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment4.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment4.xml" value="0.1" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment_check_role.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment_n_g_o_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment_period_product_information.xml" value="0.25" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment_student_login.xml" value="0.2" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/fragment_teacher_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/ngo_information.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/period_information.xml" value="0.264" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/splash_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/video_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/layout/videos.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/anika/Period-Awareness/app/src/main/res/menu/bottom_menu.xml" value="0.19722222222222222" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
