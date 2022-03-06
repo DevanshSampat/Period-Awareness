@@ -54,8 +54,8 @@ async function contactNgo(req,resp)
         }
 
         request = new ngoMapModel({
-            schoolId,
-            ngoId,
+            schoolId:new ObjectId(schoolId),
+            ngoId:new ObjectId(ngoId),
         });
         await request.save();
 
