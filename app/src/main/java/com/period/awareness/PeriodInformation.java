@@ -22,25 +22,30 @@ public class PeriodInformation extends Fragment implements View.OnClickListener 
 
         TextView pads = v.findViewById(R.id.pads);
         Button more_info = v.findViewById(R.id.more_info);
-        more_info.setOnClickListener(this);
+        more_info.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                       Fragment newFragment = new PeriodProductInformation();
+                      // consider using Java coding conventions (upper first char class names!!!)
+                      FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+                      // Replace whatever is in the fragment_container view with this fragment,
+                      // and add the transaction to the back stack
+                      transaction.replace(R.id.main_activity, newFragment);
+                      transaction.addToBackStack(null);
+                    }
+                }
+        );
         TextView cups = v.findViewById(R.id.cups);
         TextView tampons = v.findViewById(R.id.tampons);
         return v;
     }
     @Override
     public void onClick(View v) {
-        Log.v("onclick","inside the onclick v");
-        // Create new fragment and transaction
-        Fragment newFragment = new PeriodProductInformation();
-        // consider using Java coding conventions (upper first char class names!!!)
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+      
+       
 
-        // Replace whatever is in the fragment_container view with this fragment,
-        // and add the transaction to the back stack
-        transaction.replace(R.id.main_activity, newFragment);
-        transaction.addToBackStack(null);
 
-        // Commit the transaction
-        transaction.commit();
     }
 }

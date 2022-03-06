@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    app:cardCornerRadius="12dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#FCD2D1"
+        android:layout_margin="12dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="ngo name "
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_slab"
+            android:textSize="22sp"
+            android:id="@+id/name"
+            android:paddingLeft="8dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Location : Mumbai"
+            android:paddingLeft="8dp"
+            android:id="@+id/location"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Funding : 10000"
+            android:textColor="@color/black"
+            android:paddingLeft="8dp"
+            android:id="@+id/funding"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:id="@+id/contact_btn"
+            android:text="Contact"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:background="@color/black"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
