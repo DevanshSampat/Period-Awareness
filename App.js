@@ -1,11 +1,13 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require('cors')
 
 require("dotenv").config();
 
 const serverPort = parseInt(process.env.PORT) || 5000;
 
 const expressApp = express();
+expressApp.use(cors());
 expressApp.use(express.json());
 expressApp.use(express.urlencoded({ extended: false }));
 
