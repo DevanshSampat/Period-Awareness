@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public class EntirePostModel {
     @SerializedName("questions") private ArrayList<PostModel> postModelArrayList;
-
     public ArrayList<PostModel> getPostModelArrayList() {
         return postModelArrayList;
     }

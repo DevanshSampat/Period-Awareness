@@ -23,14 +23,6 @@
             android:textColor="@color/white"
             android:text="Why is this question asked?" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:layout_marginTop="6dp"
-            android:textColor="#DDDDDD"
-            android:text="Someone from Mumbai High School" />
-
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

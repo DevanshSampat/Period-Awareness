@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="number_of_options">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+    </integer-array>
+  <string-array name="questions">
+        <item>How long does the typical period last?</item>
+        <item>How much blood does the average woman lose during each period?</item>
+        <item>When your period starts, it is normal to feel pain in:</item>
+        <item>What might make your period feel worse?</item>
+        <item>It is normal to see brown blood in your period.</item>
+    </string-array>
+    <string-array name="correctoptions">
+        <item>3–5 days</item>
+        <item>2 tablespoons</item>
+        <item>Your belly,back or both</item>
+        <item>Stress</item>
+        <item>True</item>
+    </string-array>
+    <string-array name="options">
+        <item>2–3 days</item>
+        <item>3–5 days</item>
+        <item>6–7 days</item>
+        <item>2 tablespoons</item>
+        <item>1/3cup</item>
+        <item>1cup</item>
+        <item>Your arms,legs or both</item>
+        <item>Your belly,back or both</item>
+        <item>Just your belly</item>
+        <item>Exercise</item>
+        <item>Stress</item>
+        <item>Chocolate</item>
+        <item>True</item>
+        <item>False</item>
+    </string-array>
+    <string-array name="faqs">
+        <item>While 3–5 days is most common, anywhere between 2 and 7 days is considered normal. See your doctor if your period lasts longer than a week or suddenly changes from what is regular for you.</item>
+        <item>While you cannot easily measure blood loss, most women know when their menstrual flow is heavy. If flow seems excessive, is soaking a pad or tampon every hour for several hours, or you see large clots, tell your doctor.</item>
+        <item>But you should report very intense or lasting pain to your doctor. Lasting pain in the pelvic area can be a symptom of more serious problems, such as endometriosis — the growth outside the uterus, usually into the pelvic cavity of tissue that normally lines the uterus.</item>
+        <item>A 2010 study found that women who reported feeling highly stressed were more than twice as likely to report having at least five moderate to severe symptoms with their periods as women with lower stress.</item>
+        <item>Blood colors ranging from bright red to deep brown are normal, and different colors can appear over the course of the same period.</item>
+    </string-array>
+</resources>
