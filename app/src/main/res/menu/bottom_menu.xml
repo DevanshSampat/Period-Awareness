@@ -4,26 +4,26 @@
 
     <item
         android:id="@+id/page1"
-        android:title="Page 1"
-        android:icon="@drawable/ic_baseline_circle_24"
+        android:title="Awareness"
+        android:icon="@drawable/ic_baseline_library_books_24"
         tools:ignore="HardcodedText" />
 
     <item
         android:id="@+id/page2"
-        android:title="Page 2"
-        android:icon="@drawable/ic_baseline_circle_24"
+        android:title="Videos"
+        android:icon="@drawable/ic_baseline_video_24"
         tools:ignore="HardcodedText" />
 
     <item
         android:id="@+id/page3"
-        android:title="Page 3"
-        android:icon="@drawable/ic_baseline_circle_24"
+        android:title="Quiz"
+        android:icon="@drawable/ic_baseline_lightbulb_24"
         tools:ignore="HardcodedText" />
 
     <item
         android:id="@+id/page4"
-        android:title="Page 4"
-        android:icon="@drawable/ic_baseline_circle_24"
+        android:title="FAQ"
+        android:icon="@drawable/ic_baseline_question_mark_24"
         tools:ignore="HardcodedText" />
 
 
